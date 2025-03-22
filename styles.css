@@ -1,0 +1,112 @@
+    .modal {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    z-index: 1000;
+}
+
+.modal h3 {
+    margin-bottom: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+button.modal-btn {
+    background: #06afe8;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.modal-btn:hover {
+    background: #028bb8;
+}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background: linear-gradient(120deg, #ffffff, #06afe8);
+            color: #333;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .knowledge-item {
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 400px; /* Đảm bảo không bị quá nhỏ */
+    width: fit-content; /* Điều chỉnh theo nội dung */
+    max-width: 100%;
+        }
+        .points {
+            display: flex;
+    flex-wrap: wrap; /* Cho phép các điểm xuống dòng nếu quá dài */
+    gap: 8px;
+    max-width: 100%; /* Đảm bảo không tràn ra ngoài */
+    justify-content: flex-start;
+        }
+        .point {
+            width: 15px;
+            height: 15px;
+            background-color: lightgray;
+            border-radius: 50%;
+        }
+        .filled {
+            background-color: green;
+        }
+        button {
+            background: #75f1ff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #06afe8;
+        }
+        /* Thêm viền bao quanh bảng tổng hợp */
+        .summary-container {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .summary-container h3 {
+            margin: 0;
+            padding-bottom: 5px;
+        }
