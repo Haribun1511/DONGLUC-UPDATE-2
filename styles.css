@@ -22,7 +22,14 @@ body {
     flex-direction: column; /* Sắp xếp theo chiều dọc */
     gap: 10px;
     padding: 10px;
+    opacity: 0; /* Ban đầu ẩn đi*/ 
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Ngăn chặn click khi đang ẩn */
 
+}
+.color-palette.show {
+    opacity: 1; /* Hiện ra khi cuộn trang */
+    pointer-events: auto;
 }
 .color-box {
     width: 50px;
