@@ -167,3 +167,11 @@ function updateSummary(name, points, score) {
             totalScore += score; // Cộng điểm vào tổng điểm
             document.getElementById('total-score').innerText = totalScore; // Cập nhật điểm trên giao diện
         }
+        function changeColor(color) {
+            document.body.classList.add("fade-out"); // Làm mờ trước khi đổi màu
+        
+            setTimeout(() => {
+                document.body.style.background = color;
+                document.body.classList.remove("fade-out"); // Hiển thị lại màu mới
+            }, 500); // Đợi 0.5s trước khi đổi màu
+        }
