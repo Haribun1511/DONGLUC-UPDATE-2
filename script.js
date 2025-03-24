@@ -175,3 +175,18 @@ function updateSummary(name, points, score) {
                 document.body.classList.remove("fade-out"); // Hiển thị lại màu mới
             }, 500); // Đợi 0.5s trước khi đổi màu
         }
+
+let lastScrollY = window.scrollY;
+let colorPalette = document.querySelector(".color-palette");
+let timeout;
+
+window.addEventListener("scroll", () => {
+    clearTimeout(timeout); // Xóa timer trước đó nếu có
+    colorPalette.classList.add("show"); // Hiện bảng màu khi cuộn
+
+    // Ẩn lại sau 2 giây nếu không cuộn nữa
+    timeout = setTimeout(() => {
+        colorPalette.classList.remove("show");
+    }, 2000);
+});
+
