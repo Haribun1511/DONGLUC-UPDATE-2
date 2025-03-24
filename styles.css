@@ -7,8 +7,36 @@ body {
     margin: 20px;
     background: linear-gradient(120deg, #dfe9f3, #75f1ff);
     color: #333;
+    justify-content: flex-end;
+    transition: background 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+.fade-out {
+    opacity: 0;
+}
+.color-palette {
+    position: fixed; /* Cố định vị trí */
+    top: 20px; /* Khoảng cách từ trên xuống */
+    left: 20px; /* Đưa về góc phải */
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    gap: 10px;
+    padding: 10px;
+
+}
+.color-box {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.pastel-1 { background:linear-gradient(120deg,#dfe9f3, #75f1ff);  }
+.pastel-2 { background:linear-gradient(90deg,#fd74b8,#fcd8f7); }
+.pastel-3 { background: linear-gradient(180deg,#fe7c12,#ffff5b,#ffffff,#ffff5b,#fe7c12); }
+.pastel-4 { background:linear-gradient(-180deg,#55cfff,#49ff43); }
+.pastel-5 { background:linear-gradient(-180deg,#ffffff,#000000,#000000,#ffffff); }
 .container {
     max-width: 600px;
     margin: auto;
@@ -54,7 +82,7 @@ body {
 
 button {
     background: #06afe8;
-    color: white;
+    color: rgb(253, 253, 253);
     border: none;
     padding: 10px 15px;
     border-radius: 8px;
@@ -107,3 +135,17 @@ button:hover {
     padding-bottom: 8px;
     font-weight: 600;
 }
+.points {
+    display: flex;
+flex-wrap: wrap; /* Cho phép các điểm xuống dòng nếu quá dài */
+gap: 8px;
+max-width: 100%; /* Đảm bảo không tràn ra ngoài */
+justify-content: flex-start;
+}  .point {
+    width: 15px;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+.filled {
+    background-color: green;}
