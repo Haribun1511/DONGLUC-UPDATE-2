@@ -176,17 +176,30 @@ function updateSummary(name, points, score) {
             }, 500); // Đợi 0.5s trước khi đổi màu
         }
 
-let lastScrollY = window.scrollY;
-let colorPalette = document.querySelector(".color-palette");
-let timeout;
+        let colorPalette = document.querySelector(".color-palette");
+        let timeout;
+        
+        // Hàm hiển thị bảng màu và tự động ẩn sau một khoảng thời gian
+        function showPalette(delay = 2000) {
+            clearTimeout(timeout); // Xóa bộ đếm trước đó nếu có
+            colorPalette.classList.add("show"); // Hiện bảng màu
+        
+            // Đặt bộ đếm thời gian để ẩn bảng màu sau `delay` ms
+            timeout = setTimeout(() => {
+                colorPalette.classList.remove("show");
+            }, delay);
+        }
+        
+        // Hiển thị bảng màu trong 5s khi mở trang
+        window.addEventListener("load", () => showPalette(5000));
+        
+        // Hiển thị bảng màu khi cuộn và ẩn sau 2s
+        window.addEventListener("scroll", () => showPalette(5000));
+        
+        // Khi người dùng chọn màu, bảng màu sẽ hiển thị lại và giữ thêm 2s
+        document.querySelectorAll(".color-option").forEach(option => {
+            option.addEventListener("click", () => showPalette(2000));
+        });
 
-window.addEventListener("scroll", () => {
-    clearTimeout(timeout); // Xóa timer trước đó nếu có
-    colorPalette.classList.add("show"); // Hiện bảng màu khi cuộn
 
-    // Ẩn lại sau 2 giây nếu không cuộn nữa
-    timeout = setTimeout(() => {
-        colorPalette.classList.remove("show");
-    }, 2000);
-});
 
