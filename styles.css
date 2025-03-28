@@ -148,11 +148,4 @@ flex-wrap: wrap; /* Cho phép các điểm xuống dòng nếu quá dài */
 gap: 8px;
 max-width: 100%; /* Đảm bảo không tràn ra ngoài */
 justify-content: flex-start;
-}  .point {
-    width: 15px;
-    height: 15px;
-    background-color: lightgray;
-    border-radius: 50%;
-}
-.filled {
-    background-color: green;}
+} 
